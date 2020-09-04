@@ -3,8 +3,6 @@ const server = require('http').createServer(app)
 const io = require('socket.io').listen(server)
 const users = require('./users')()
 
-server.listen(3000)
-
 const m = (name, text, id) => ({name, text, id})
 
 io.on('connection', socket => {

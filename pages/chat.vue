@@ -2,7 +2,7 @@
   <div class="c-wrap">
     <div class="c-chat" ref="block">
       <Message v-for="m in messages"
-               :key="m.text"
+               :key="m.text + Math.random()"
                :name="m.name"
                :text="m.text"
                :owner="m.id === user.id"
